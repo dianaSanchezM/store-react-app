@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import NavBar from './components/Navbar';
+import Header from "./components/Header";
 
 function App() {
   const [user, setUser] = useState({});
 
   useEffect(()=>{
     getUserData();
-    postData('user/points', {amount: 1000});
+    //postData('user/points', {amount: 1000});
   },[]);
   const getUserData = () => {
     const url = `https://coding-challenge-api.aerolab.co/user/me`;
@@ -36,7 +37,10 @@ function App() {
   }
   
   return (
-    <NavBar {...user}/>
+    <>
+      <NavBar {...user}/>
+      <Header />
+    </>
   );
 }
 

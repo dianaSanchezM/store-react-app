@@ -23,7 +23,7 @@ const NavBar = ({ name, points }) => {
         </li>
       </ul>
       <div className="profile">
-        <p>{name}</p>
+        <p className='username' >{name}</p>
         <div className="points">
           <p>{points}</p>
           <img src={coin} alt="coin" />
