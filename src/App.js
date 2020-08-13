@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import NavBar from './components/Navbar';
 
 function App() {
-  const getData = (path) => {
-    const url = `https://coding-challenge-api.aerolab.co/${path}`;
-      fetch(url, {
+  const [user, setUser] = useState({});
+
+  useEffect(()=>{
+    getUserData();
+    postData('user/points', {amount: 1000});
+  },[]);
+  const getUserData = () => {
+    const url = `https://coding-challenge-api.aerolab.co/user/me`;
+      return (fetch(url, {
         method: 'GET', 
         headers:{
           'Content-Type': 'application/json',
@@ -11,7 +18,8 @@ function App() {
         }
       }).then(res => res.json())
       .catch(error => console.error('Error:', error))
-      .then(response => console.log('Success:', response));
+      .then(response => setUser(response)));
+      
   };
 
   const postData = (path, data) => {
@@ -26,9 +34,10 @@ function App() {
     .catch(error => console.error('Error:', error))
     .then(response => console.log('Success:', response));
   }
-  getData('user/me');
-  postData('user/points', {amount: 1000});
-  return <div>Hello world</div>;
+  
+  return (
+    <NavBar {...user}/>
+  );
 }
 
 export default App;
