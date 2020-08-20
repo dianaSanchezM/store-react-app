@@ -1,10 +1,19 @@
-import React from "react";
+import React, {useEffect, useContext } from "react";
 import "./navbar.css";
 import Logo from "../../images/aerolab-logo.svg";
 import coin from "../../images/coin.svg";
 import { Link } from 'react-router-dom';
+import {pathsData, fetchData} from '../../const';
+import { AppContext } from '../../contexts/UserContext';
 
-const NavBar = ({ name, points }) => {
+
+const NavBar = () => {
+  const {user: {name, points}, setUser} = useContext(AppContext);
+  
+  useEffect(() => {
+    fetchData({ data: pathsData.LOAD_USER}).then( res => setUser(res));
+  }, [setUser]);
+
   return (
     <div className="navigation-bar">
       <div className="logo">
