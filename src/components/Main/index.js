@@ -10,7 +10,7 @@ const Main = () => {
         exact
         path="/"
         render={() => {
-          return <Products {...pathsData.LOAD_PRODUCTS} />;
+          return <Products {...pathsData.products} />;
         }}
       />
 

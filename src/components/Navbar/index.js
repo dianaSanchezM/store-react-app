@@ -11,7 +11,7 @@ const NavBar = () => {
   const {user: {name, points}, setUser} = useContext(AppContext);
   
   useEffect(() => {
-    fetchData({ data: pathsData.LOAD_USER}).then( res => setUser(res));
+    fetchData({ data: pathsData.load_user}).then( res => setUser(res));
   }, [setUser]);
 
   return (

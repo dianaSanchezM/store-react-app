@@ -1,25 +1,25 @@
 export const pathsData = {
-  LOAD_USER: {
+  load_user: {
     id: "profile",
     path: "/user/me",
     method: "GET",
   },
-  LOAD_PRODUCTS: {
+  products: {
     id: "products",
     path: "/products",
     method: "GET",
   },
-  LOAD_HISTORY: {
+  history: {
     id: "history",
     path: "/user/history",
     method: "GET",
   },
-  REDEED: {
+  redeem: {
     id: "redeem",
     path: "/redeem",
     method: "POST",
   },
-  POINTS: {
+  points: {
     id: "points",
     path: "/user/points",
     method: "POST",
