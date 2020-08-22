@@ -50,3 +50,14 @@ export const sortFactors = [
   'Lowest price',
   'Higest price'
 ]
+
+export const filters = [
+  {
+    id: 'category',
+    options: []
+  },
+  {
+    id: 'price',
+    options: ['0 - 500', '501 - 1000', '1001 - 1500', '1501 - 2000', '2001 - 2500', '+25000']
+  }
+]

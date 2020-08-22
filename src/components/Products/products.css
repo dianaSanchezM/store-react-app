@@ -2,6 +2,12 @@
   background-color: #F2F2F2;
 }
 
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .main {
   padding: 3rem;
   padding-top: 0mm;
