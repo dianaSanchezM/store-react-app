@@ -2,7 +2,6 @@ import React from "react";
 import "./productCard.css";
 
 const ProductCard = ({ _id, name, cost, category, img: { url } }) => {
-  console.log(_id, name, cost, category, url);
   return (
     <div className="card">
       <img

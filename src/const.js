@@ -45,3 +45,8 @@ export async function fetchData({ data: { path, method }, body }) {
   const data = await response.json();
   return data;
 }
+
+export const sortFactors = [
+  'Lowest price',
+  'Higest price'
+]

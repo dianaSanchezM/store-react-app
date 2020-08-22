@@ -1,6 +1,10 @@
+.products{
+  background-color: #F2F2F2;
+}
+
 .main {
-  background-color: #f9f9f9;
   padding: 3rem;
+  padding-top: 0mm;
 }
 
 .grid {
