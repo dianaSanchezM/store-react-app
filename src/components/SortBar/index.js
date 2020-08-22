@@ -13,7 +13,7 @@ const SortBar = ({setSortBy}) => {
     return (
         <div className='sortBar'>
             <p>Sort by: </p>
-            {sortFactors.map(element => <button className={(active===element)?'btn-active':'btn'} onClick={() =>handleSort(element)}>{element}</button>)}
+            {sortFactors.map(element => <button key={element} className={(active===element)?'btn-active':'btn'} onClick={() =>handleSort(element)}>{element}</button>)}
         </div>
     );
 }

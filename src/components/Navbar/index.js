@@ -31,7 +31,7 @@ const NavBar = () => {
           </Link>
         </li>
       </ul>
-      <div className="profile">
+      <div className="profile-data">
         <p className='username' >{name}</p>
         <div className="points">
           <p>{points}</p>

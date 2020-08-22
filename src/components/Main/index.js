@@ -1,7 +1,8 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Products from "../Products";
-import { pathsData} from '../../const';
+import { pathsData } from "../../const";
+import Profile from '../Profile';
 
 const Main = () => {
   return (
@@ -14,7 +15,14 @@ const Main = () => {
         }}
       />
 
-      {/* <Route path="/profile" component={Profile} />  */}
+      <Route
+        exact
+        path="/profile"
+        render={() => {
+          return <Profile info={pathsData.history} />;
+          //return <Products {...pathsData.products} />;
+        }}
+      />
     </Switch>
   );
 };

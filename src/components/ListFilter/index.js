@@ -14,7 +14,7 @@ const ListFilter = ({ handleFilterChange, id, options }) => {
     <div className="filter">
       <select onChange={(e) => handleChange(e.target.value)} value={selected}>
         {options.map((item) => (
-          <option value={item}>{item}</option>
+          <option key={item} value={item}>{item}</option>
         ))}
       </select>
     </div>

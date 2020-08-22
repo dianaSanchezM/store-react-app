@@ -15,14 +15,14 @@
   align-items: center;
   padding: 1%;
 }
-.profile {
+.profile-data {
   display: flex;
   flex-direction: row;
   float: right;
   
 }
 
-.profile p {
+.profile-data p {
   font-family: Source Sans Pro;
   font-style: normal;
   font-weight: normal;
