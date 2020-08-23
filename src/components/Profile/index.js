@@ -19,7 +19,7 @@ const Profile = ({ info }) => {
         </div>
         <Points />
       </div>
-      <h2>Buy history</h2>
+      <h1 className='history-title'>BUY HISTORY</h1>
       <Products {...info} />
     </div>
   );

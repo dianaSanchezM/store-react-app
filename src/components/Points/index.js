@@ -23,16 +23,18 @@ const Points = () => {
 
   return (
     <div className="points-comp">
+      <div className='options'>
       {add_points_options.map((element) => (
         <button
           key={element}
-          className={selected === element ? "btn-active" : "btn"}
+          className={selected === element ? "btn-active number" : "btn number"}
           onClick={() => setSelected(element)}
         >
           {element}
         </button>
       ))}
-      <button className="btn" onClick={() => handlePost()}>
+      </div>
+      <button className="btn add" onClick={() => handlePost()}>
         Add points
       </button>
       <h3>{message}!</h3>

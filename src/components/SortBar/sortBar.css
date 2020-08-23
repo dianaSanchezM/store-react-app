@@ -1,11 +1,13 @@
-.sortBar{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1%;
+.sortBar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1%;
+  font-family: SourceSansPro-Regular;
+  font-size: 24px;
 }
 
-.btn{  
+.btn {
   border-radius: 25px;
   width: 200px;
   padding: 0.2%;

@@ -5,17 +5,16 @@
 }
 
 .menu {
+  color: grey;
   display: flex;
   flex-direction: row;
   align-items: center;
-}
-
-.main {
-  padding: 3rem;
-  padding-top: 0mm;
+  justify-content: space-around;
 }
 
 .grid {
+  padding: 3rem;
+  padding-top: 0mm;
   display: grid;
   grid-template-columns: 20% 20% 20% 20%;
   grid-gap: 20px;

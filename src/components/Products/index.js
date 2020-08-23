@@ -40,12 +40,10 @@ const Products = ({ id, method, path }) => {
         />
       </div>
 
-      <div className="main">
-        <div className="grid">
-          {productsToDisplay.map((element) => (
-            <ProductCard key={element._id} {...element} />
-          ))}
-        </div>
+      <div className="grid">
+        {productsToDisplay.map((element) => (
+          <ProductCard key={element._id} {...element} />
+        ))}
       </div>
     </div>
   );

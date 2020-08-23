@@ -1,0 +1,25 @@
+.profile {
+  background-color: #f2f2f2;
+  height: 100%;
+  width: 100%;
+  
+}
+
+.history-title {
+  color: #0ad4fa;
+  text-align: center;
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2%;
+    
+}
+
+.user-info {
+    text-align: center;
+    color: gray;
+}

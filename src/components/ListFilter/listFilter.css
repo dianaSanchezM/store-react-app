@@ -1,0 +1,16 @@
+.filter select {
+  border-radius: 25px;
+  width: 200px;
+  height: 50px;
+  padding: 0.2%;
+  border: none;
+  background: #d4cbcb;
+  font-family: SourceSansPro-Regular;
+  font-size: 24px;
+  letter-spacing: -0.15px;
+  line-height: 48px;
+  text-align: center;
+  color: #a3a3a3;
+}
+
+
