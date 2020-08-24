@@ -12,7 +12,7 @@ const NavBar = () => {
   
   useEffect(() => {
     fetchData({ data: pathsData.load_user}).then( res => setUser(res));
-  }, [setUser]);
+  }, [points, setUser]);
 
   return (
     <div className="navigation-bar">
