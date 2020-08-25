@@ -9,7 +9,7 @@ const Main = () => {
     <Switch>
       <Route
         exact
-        path="/"
+        path="/store-react-app/"
         render={() => {
           return <Products {...pathsData.products} />;
         }}
@@ -17,10 +17,9 @@ const Main = () => {
 
       <Route
         exact
-        path="/profile"
+        path="/store-react-app/profile"
         render={() => {
           return <Profile info={pathsData.history} />;
-          //return <Products {...pathsData.products} />;
         }}
       />
     </Switch>

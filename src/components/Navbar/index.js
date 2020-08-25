@@ -21,12 +21,12 @@ const NavBar = () => {
       </div>
       <ul className="links">
         <li >
-          <Link className="link" to='/profile'>
+          <Link className="link" to='/store-react-app/profile'>
             Profile
           </Link>
         </li>
         <li >
-          <Link className="link" to='/'>
+          <Link className="link" to='/store-react-app/'>
             Products
           </Link>
         </li>
