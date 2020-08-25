@@ -1,21 +1,33 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./productCard.css";
 import BuyBlueIcon from "../../images/buy-blue.svg";
 import BuyWHiteIcon from "../../images/buy-white.svg";
 import coin from "../../images/coin.svg";
 import { AppContext } from "../../contexts/UserContext";
 import { fetchData, pathsData } from "../../const";
+import Modal from "../../utils/Modal";
 
 const ProductCard = ({ _id, name, cost, category, img: { url } }) => {
   const { user, setUser } = useContext(AppContext);
+  const [showModal, setShowModal] = useState(false);
+  const [resultMessage, setResultMessage] = useState("");
 
   const handleRedeem = () => {
     fetchData({
       data: pathsData.redeem,
       body: { productId: _id },
-    }).then((res) =>
-      fetchData({ data: pathsData.load_user }).then((result) => setUser(result))
-    );
+    })
+      .then((res) => {
+        setShowModal(true);
+        res.message === "You've redeem the product successfully"
+          ? setResultMessage(res.message)
+          : setResultMessage("Oh no, something went wrong!");
+
+        fetchData({ data: pathsData.load_user }).then((result) =>
+          setUser(result)
+        );
+      })
+      .catch(setResultMessage("Oh no, something went wrong!"));
   };
 
   const difference = user.points - cost;
@@ -37,7 +49,7 @@ const ProductCard = ({ _id, name, cost, category, img: { url } }) => {
         <div className="line"></div>
         <p>{category}</p>
         <h3>{name}</h3>
-        <div >
+        <div>
           <p>{cost}</p>
         </div>
       </div>
@@ -55,6 +67,14 @@ const ProductCard = ({ _id, name, cost, category, img: { url } }) => {
             </button>
           </div>
         </div>
+      )}
+
+      {showModal && (
+        <Modal setShowModal={setShowModal} showModal={showModal}>
+          <div className="modal-confirmartion">
+            <p>{resultMessage}</p>
+          </div>
+        </Modal>
       )}
     </div>
   );

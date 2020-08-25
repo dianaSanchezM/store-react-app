@@ -54,7 +54,7 @@ const Products = ({ id, method, path }) => {
           <ProductCard key={element._id} {...element} />
         ))}
       </div>
-      <div className="menu" style={{'justify-content':'right', 'paddingRight':'10%'}}>
+      <div className="menu" style={{'justifyContent':'right', 'paddingRight':'10%'}}>
         <Pagination currentPage={currentPage} jump={jump} prev={prev} next={next} maxPage={maxPage} />
       </div>
     </div>
