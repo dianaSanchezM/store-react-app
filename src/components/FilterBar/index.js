@@ -3,15 +3,15 @@ import ListFilter from '../ListFilter';
 import './filterBar.css';
 import { filters } from '../../const';
 
-const FilterBar = ({ products, setCategoryFilter, setPriceFilter }) => {
+const FilterBar = ({ products, setCategoryFilter, setPriceFilter, jump }) => {
     let categories = [...products].map(e => e.category);
     const category = {...filters[0], options: categories.filter((element,pos) => categories.indexOf(element) === pos)};
 
     return (
         <div className='filterBar'>
             <p>Filter by: </p>
-            <ListFilter {...category} handleFilterChange={setCategoryFilter}/>
-            <ListFilter {...filters[1]} handleFilterChange={setPriceFilter}/>
+            <ListFilter {...category} handleFilterChange={setCategoryFilter} jump={jump}/>
+            <ListFilter {...filters[1]} handleFilterChange={setPriceFilter} jump={jump} />
         </div>
     );
 }

@@ -37,6 +37,9 @@ const ProductCard = ({ _id, name, cost, category, img: { url } }) => {
         <div className="line"></div>
         <p>{category}</p>
         <h3>{name}</h3>
+        <div >
+          <p>{cost}</p>
+        </div>
       </div>
 
       {difference > 0 && (

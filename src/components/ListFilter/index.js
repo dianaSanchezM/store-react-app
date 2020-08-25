@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import "./listFilter.css";
 
-const ListFilter = ({ handleFilterChange, id, options }) => {
+const ListFilter = ({ handleFilterChange, id, options, jump }) => {
   const [selected, setSelected] = useState("");
   options = [id, ...options];
 
   const handleChange = (selection) => {
     setSelected(selection);
     handleFilterChange(selection);
+    jump(1);
   };
 
   return (

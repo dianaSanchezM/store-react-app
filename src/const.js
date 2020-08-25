@@ -66,3 +66,5 @@ export const filters = [
 export const add_points_options = [
   1000, 5000, 7500
 ]
+
+export const itemsPerPage = 16;

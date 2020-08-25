@@ -1,0 +1,27 @@
+.pagination {
+  display: flex;
+  flex-direction: row;
+  float: right;
+  color: grey;
+  font-family: SourceSansPro-Regular;
+  font-size: 24px;
+  letter-spacing: -0.15px;
+  width: fit-content;
+}
+
+.pagination button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: grey;
+  font-family: SourceSansPro-Regular;
+  font-size: 24px;
+  letter-spacing: -0.15px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.pagination button:hover:not(.active) {
+  background-color: #ddd;
+  color: #0ad4fa;
+}

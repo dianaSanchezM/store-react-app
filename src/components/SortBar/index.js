@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import './sortBar.css';
 import { sortFactors } from '../../const';
 
-const SortBar = ({setSortBy}) => {
+const SortBar = ({setSortBy, jump}) => {
     const [ active, setActive ] = useState('');
     
     const handleSort= (id) => {
         setActive(id);
         setSortBy(id);
+        jump(1);
     }
     
     return (
