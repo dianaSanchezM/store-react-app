@@ -1,2 +1,0 @@
-(this["webpackJsonpstore-sanchez-diana"]=this["webpackJsonpstore-sanchez-diana"]||[]).push([[0],{3:function(e,n,t){e.exports=t(8)},8:function(e,n,t){"use strict";t.r(n);var a=t(0),r=t.n(a),o=t(2);var c=function(){return r.a.createElement("div",null,"Hello world")};t.n(o).a.render(r.a.createElement(r.a.StrictMode,null,r.a.createElement(c,null)),document.getElementById("root"))}},[[3,1,2]]]);
-//# sourceMappingURL=main.e07e43ff.chunk.js.map

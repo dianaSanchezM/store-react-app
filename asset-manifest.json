@@ -1,19 +1,27 @@
 {
   "files": {
-    "main.js": "/store-react-app/static/js/main.e07e43ff.chunk.js",
-    "main.js.map": "/store-react-app/static/js/main.e07e43ff.chunk.js.map",
+    "main.css": "/store-react-app/static/css/main.4f908955.chunk.css",
+    "main.js": "/store-react-app/static/js/main.a5c6979a.chunk.js",
+    "main.js.map": "/store-react-app/static/js/main.a5c6979a.chunk.js.map",
     "runtime-main.js": "/store-react-app/static/js/runtime-main.c5d0caaf.js",
     "runtime-main.js.map": "/store-react-app/static/js/runtime-main.c5d0caaf.js.map",
-    "static/js/2.5fcfa28a.chunk.js": "/store-react-app/static/js/2.5fcfa28a.chunk.js",
-    "static/js/2.5fcfa28a.chunk.js.map": "/store-react-app/static/js/2.5fcfa28a.chunk.js.map",
+    "static/js/2.55c799e9.chunk.js": "/store-react-app/static/js/2.55c799e9.chunk.js",
+    "static/js/2.55c799e9.chunk.js.map": "/store-react-app/static/js/2.55c799e9.chunk.js.map",
     "index.html": "/store-react-app/index.html",
-    "precache-manifest.47afa8ba02f95116b85559f37282d448.js": "/store-react-app/precache-manifest.47afa8ba02f95116b85559f37282d448.js",
+    "precache-manifest.42834f4cf00d0536fe62c4be65fe6ebc.js": "/store-react-app/precache-manifest.42834f4cf00d0536fe62c4be65fe6ebc.js",
     "service-worker.js": "/store-react-app/service-worker.js",
-    "static/js/2.5fcfa28a.chunk.js.LICENSE.txt": "/store-react-app/static/js/2.5fcfa28a.chunk.js.LICENSE.txt"
+    "static/css/main.4f908955.chunk.css.map": "/store-react-app/static/css/main.4f908955.chunk.css.map",
+    "static/js/2.55c799e9.chunk.js.LICENSE.txt": "/store-react-app/static/js/2.55c799e9.chunk.js.LICENSE.txt",
+    "static/media/aerolab-logo.svg": "/store-react-app/static/media/aerolab-logo.71af6f4b.svg",
+    "static/media/buy-blue.svg": "/store-react-app/static/media/buy-blue.2f11a957.svg",
+    "static/media/buy-white.svg": "/store-react-app/static/media/buy-white.40bc2813.svg",
+    "static/media/coin.svg": "/store-react-app/static/media/coin.4669120c.svg",
+    "static/media/header-x2.png": "/store-react-app/static/media/header-x2.a343e153.png"
   },
   "entrypoints": [
     "static/js/runtime-main.c5d0caaf.js",
-    "static/js/2.5fcfa28a.chunk.js",
-    "static/js/main.e07e43ff.chunk.js"
+    "static/js/2.55c799e9.chunk.js",
+    "static/css/main.4f908955.chunk.css",
+    "static/js/main.a5c6979a.chunk.js"
   ]
 }
