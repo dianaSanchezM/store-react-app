@@ -49,7 +49,8 @@ const ProductCard = ({ _id, name, cost, category, img: { url } }) => {
         <div className="line"></div>
         <p>{category}</p>
         <h3>{name}</h3>
-        <div>
+        <div className="card-points">
+          <img src={coin} alt="coin" />
           <p>{cost}</p>
         </div>
       </div>

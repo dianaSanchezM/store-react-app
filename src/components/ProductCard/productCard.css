@@ -186,3 +186,26 @@
   align-items: center;
   padding-top: 30%;
 }
+
+.history-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.history-card img {
+  width: 30%;
+  height: 80%;
+}
+
+.card-points{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card-points img {
+  width: 25px;
+  padding-right: 3%;
+}

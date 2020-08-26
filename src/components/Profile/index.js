@@ -4,7 +4,7 @@ import Products from "../Products";
 import { AppContext } from "../../contexts/UserContext";
 import Points from '../Points';
 
-const Profile = ({ info }) => {
+const Profile = ({ info, render }) => {
   const {
     user: { name, points, createDate = "" },
   } = useContext(AppContext);
@@ -20,7 +20,7 @@ const Profile = ({ info }) => {
         <Points />
       </div>
       <h1 className='history-title'>BUY HISTORY</h1>
-      <Products {...info} />
+      <Products info={info} render={render}/>
     </div>
   );
 };
