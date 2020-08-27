@@ -14,22 +14,7 @@ const Modal = (props) => {
     };
   }, [element]);
 
-  return createPortal(
-    <div
-      className="modal-container"
-    >
-      <div className='modal'>
-        <button
-          className="modal-close"
-          onClick={() => props.setShowModal(!props.showModal)}
-        >
-          x
-        </button>
-        {props.children}
-      </div>
-    </div>,
-    element
-  );
+  return createPortal(<div>{props.children}</div>, element);
 };
 
 export default Modal;

@@ -2,31 +2,55 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: grey
+    color: grey;
+}
+
+.points-comp h1{
+    padding-bottom: 5%;
 }
 
 .options{
+    display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    min-width: 600px !important;
+    align-items: center;
+    padding-bottom: 5%;
+}
+
+.options button{
+    display: flex;
+    flex-direction: row;
+    margin-right: 1%!important;
+    margin-left: 1%!important;
+    width: fit-content;
+    min-width: 150px!important;         
+    justify-content: center;
 }
 
 .btn-add {
-    padding: 1%;
-    margin: 2%;
     background-color: #6e6b6b;
     color: honeydew;
+    margin-bottom: 5% !important;
+}
+
+.btn-add-points {
+    background-color: #6e6b6b !important;
+    color: honeydew!important;
+}
+
+.btn-add-points:hover {
+    background-color: #53cc35!important;
 }
 
 .number {
     width: 150px;
     height: 50px;
     text-align: center;
+    
 }
 
 .number:hover {
     background-color: #0ad4fa;
     color: #ffffff;
-}
-.btn-add:hover {
-    background-color: #53cc35;
 }

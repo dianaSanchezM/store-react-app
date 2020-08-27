@@ -10,7 +10,12 @@
   letter-spacing: -0.15px;
   line-height: 48px;
   text-align: center;
-  color: #a3a3a3;
+  color: #6b6565;
+}
+
+.filter select:hover{
+  background-color: #0ad4fa ;
+  color: #ffffff;
 }
 
 

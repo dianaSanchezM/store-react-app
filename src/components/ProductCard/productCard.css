@@ -20,12 +20,12 @@
   letter-spacing: -0.0423529px;
 
   color: #616161;
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 .card button:hover {
   background-color: #616161;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .card {
@@ -41,9 +41,9 @@
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1));
 }
 
-.card:hover{
+.card:hover {
   box-shadow: 12px 12px 32px rgba(0, 0, 0, 0.4);
-  transform: scale(1.05); 
+  transform: scale(1.05);
 }
 
 .card-hover {
@@ -58,12 +58,10 @@
     rgba(10, 212, 250, 0.86) 0%,
     rgba(37, 187, 241, 0.86) 100%
   );
-  
 }
 
 .card:hover .card-hover {
   display: block;
-  
 }
 
 .info {
@@ -199,7 +197,7 @@
   height: 80%;
 }
 
-.card-points{
+.card-points {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -208,4 +206,50 @@
 .card-points img {
   width: 25px;
   padding-right: 3%;
+}
+
+.modal-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.modal {
+  height: fit-content;
+  min-height: 20%;
+  min-width: 40%;
+  background-color: #ffffff;
+  position: relative;
+  border: 5px;
+  border-radius: 2rem;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.28) 0px 8px 28px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    Helvetica Neue, sans-serif;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #484848;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close {
+  position: absolute;
+  right: 20px;
+  top: 9px;
+  cursor: pointer;
+  border: none;
+  font-size: 20px;
+}
+
+.modal-confirmation {
+
 }

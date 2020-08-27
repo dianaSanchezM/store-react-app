@@ -72,8 +72,18 @@ const ProductCard = ({ _id, name, cost, category, img: { url } }) => {
 
       {showModal && (
         <Modal setShowModal={setShowModal} showModal={showModal}>
-          <div className="modal-confirmartion">
-            <p>{resultMessage}</p>
+          <div className="modal-container">
+            <div className="modal">
+              <button
+                className="modal-close"
+                onClick={() => setShowModal(!showModal)}
+              >
+                x
+              </button>
+              <div className="modal-confirmation">
+                <h1>{resultMessage}</h1>
+              </div>
+            </div>
           </div>
         </Modal>
       )}
