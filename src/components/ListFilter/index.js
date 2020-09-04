@@ -13,7 +13,7 @@ const ListFilter = ({ handleFilterChange, id, options, jump }) => {
 
   return (
     <div className="filter">
-      <select onChange={(e) => handleChange(e.target.value)} value={selected}>
+      <select data-testid='selectOption' onChange={(e) => handleChange(e.target.value)} value={selected}>
         {options.map((item) => (
           <option key={item} value={item}>{item}</option>
         ))}

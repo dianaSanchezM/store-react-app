@@ -12,6 +12,7 @@
 .pagination button {
   background: none;
   border: none;
+  border-radius: 15px;
   cursor: pointer;
   color: grey;
   font-family: SourceSansPro-Regular;
@@ -22,6 +23,6 @@
 }
 
 .pagination button:hover:not(.active) {
-  background-color: #ddd;
+  background-color: rgb(134, 122, 122);
   color: #0ad4fa;
 }

@@ -9,15 +9,8 @@ import Modal from "../../utils/Modal";
 import Points from "../Points";
 
 const NavBar = () => {
-  const {
-    user: { name, points },
-    setUser,
-  } = useContext(AppContext);
+  
   const [showModal, setShowModal] = useState(false);
-
-  useEffect(() => {
-    fetchData({ data: pathsData.load_user }).then((res) => setUser(res));
-  }, [setUser]);
 
   return (
     <div className="navigation-bar">
@@ -36,13 +29,9 @@ const NavBar = () => {
           </Link>
         </li>
       </ul>
-      <button className="profile-data" onClick={() => setShowModal(!showModal)}>
-        <p className="username">{name}</p>
-        <div className="points">
-          <p>{points}</p>
-          <img src={coin} alt="coin" />
-        </div>
-      </button>
+
+      <ProfileCard setShowModal={setShowModal} showModal={showModal} /> 
+      
       {showModal && (
         <Modal>
           <div className="modal-container">
@@ -63,5 +52,26 @@ const NavBar = () => {
     </div>
   );
 };
+
+export const ProfileCard = ({ setShowModal, showModal}) => {
+  const {
+    user: { name, points },
+    setUser,
+  } = useContext(AppContext);
+
+  useEffect(() => {
+    fetchData({ data: pathsData.load_user }).then((res) => setUser(res));
+  }, [setUser]);
+
+  return(
+    <button className="profile-data" onClick={() => setShowModal(!showModal)}>
+        <p className="username">{name}</p>
+        <div className="points">
+          <p>{points}</p>
+          <img src={coin} alt="coin" />
+        </div>
+      </button>
+  )
+}
 
 export default NavBar;

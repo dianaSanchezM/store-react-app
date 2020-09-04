@@ -1,40 +1,46 @@
 import React, { useEffect, useState, Fragment } from "react";
 import "./products.css";
-import { fetchData, pathsData, filters } from "../../const";
+import {
+  fetchData,
+  pathsData,
+  filters,
+  sortFactors,
+  itemsPerPage,
+} from "../../const";
 import SortBar from "../SortBar";
-import { sortFactors, itemsPerPage } from "../../const";
 import FilterBar from "../FilterBar";
 import usePagination from "../../utils/usePagination";
 import Pagination from "../Pagination";
 
 const Products = ({ info: { id }, render }) => {
   const [products, setProducts] = useState([]);
-  const [priceFilter, setPriceFilter] = useState(filters[1].id);
-  const [categoryFilter, setCategoryFilter] = useState(filters[0].id);
+  const [priceFilter, setPriceFilter] = useState(filters.price.id);
+  const [categoryFilter, setCategoryFilter] = useState(filters.category.id);
   const [sortBy, setSortBy] = useState("");
 
   useEffect(() => {
-    fetchData({ data: pathsData[id] }).then((res) => setProducts(res));
+    //fetchData({ data: pathsData[id] }).then((res) => setProducts(res));
+    (async () => {
+      setProducts(await fetchData({ data: pathsData[id] }));
+    })();
   }, [id]);
 
-  let productsToDisplay = [...products]
-    .sort((a, b) =>
-      sortBy === sortFactors[0] ? a.cost - b.cost : b.cost - a.cost
-    )
-    .filter(
+  const productsToDisplay = products.filter(
       (element) =>
-        (categoryFilter === filters[0].id ||
+        (categoryFilter === filters.category.id ||
           element.category === categoryFilter) &&
-        (priceFilter === filters[1].id ||
+        (priceFilter === filters.price.id ||
           (element.cost > parseInt(priceFilter.split("-")[0]) &&
-            element.cost < parseInt(priceFilter.split("-")[1])))
+            element.cost <= parseInt(priceFilter.split("-")[1])))
+    )
+    .sort((a, b) =>
+      sortBy === sortFactors.lowPrice ? a.cost - b.cost : b.cost - a.cost
     );
 
   const { next, prev, jump, currentData, currentPage, maxPage } = usePagination(
     productsToDisplay,
     itemsPerPage
   );
-  productsToDisplay = currentData();
 
   return (
     <div className="products">
@@ -56,8 +62,8 @@ const Products = ({ info: { id }, render }) => {
       </div>
 
       <div className="grid">
-        {productsToDisplay.map((element) => (
-          <Fragment key={element.id}>{render({ ...element })}</Fragment>
+        {currentData().map((element) => (
+          <Fragment key={Math.random()}>{render({ ...element })}</Fragment>
         ))}
       </div>
       <div

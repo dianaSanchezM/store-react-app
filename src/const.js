@@ -45,21 +45,21 @@ export async function fetchData({ data: { path, method }, body }) {
   return data;
 }
 
-export const sortFactors = [
-  'Lowest price',
-  'Higest price'
-]
+export const sortFactors = {
+  lowPrice:'Lowest price',
+  hightPrice:'Higest price'
+}
 
-export const filters = [
-  {
+export const filters = {
+  category: {
     id: 'Any category',
     options: []
   },
-  {
+  price: {
     id: 'Any price',
     options: ['0 - 500', '501 - 1000', '1001 - 1500', '1501 - 2000', '2001 - 2500']
   }
-]
+}
 
 export const add_points_options = [
   1000, 5000, 7500

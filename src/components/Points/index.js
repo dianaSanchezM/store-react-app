@@ -10,14 +10,16 @@ const Points = () => {
   const [message, setMessage] = useState("Add points to your account now");
   let isMounted = useRef(true);
 
-  const handlePost = (e) => {
-    e.preventDefault();
+  const handlePost = () => {
+    
     fetchData({ data: pathsData.points, body: { amount: selected } })
       .then((res) => {
          setUser({ ...user, points: res["New Points"] });
          isMounted.current && setMessage(res.message);
       
-      })
+      }).catch(
+        isMounted.current && setMessage('Oh! Something went wrong')
+      )
   };
 
   useEffect(()=> {
@@ -43,12 +45,13 @@ const Points = () => {
           </button>
         ))}
       </div>
-      <button className="btn btn-add btn-add-points" onClick={(e) => handlePost(e)}>
+      <button className="btn btn-add btn-add-points" onClick={() => handlePost()}>
         Go!
       </button>
       <h3>{message}!</h3>
     </div>
   );
 };
+
 
 export default Points;

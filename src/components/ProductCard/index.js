@@ -27,7 +27,10 @@ const ProductCard = ({ _id, name, cost, category, img: { url } }) => {
           setUser(result)
         );
       })
-      .catch(setResultMessage("Oh no, something went wrong!"));
+      .catch(() => {
+        setShowModal(true);
+        setResultMessage("Oh no, something went wrong!");
+      });
   };
 
   const difference = user.points - cost;
