@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/store-react-app/static/css/main.4f908955.chunk.css",
-    "main.js": "/store-react-app/static/js/main.a5c6979a.chunk.js",
-    "main.js.map": "/store-react-app/static/js/main.a5c6979a.chunk.js.map",
+    "main.css": "/store-react-app/static/css/main.7bc28bd8.chunk.css",
+    "main.js": "/store-react-app/static/js/main.c837ff9c.chunk.js",
+    "main.js.map": "/store-react-app/static/js/main.c837ff9c.chunk.js.map",
     "runtime-main.js": "/store-react-app/static/js/runtime-main.c5d0caaf.js",
     "runtime-main.js.map": "/store-react-app/static/js/runtime-main.c5d0caaf.js.map",
-    "static/js/2.55c799e9.chunk.js": "/store-react-app/static/js/2.55c799e9.chunk.js",
-    "static/js/2.55c799e9.chunk.js.map": "/store-react-app/static/js/2.55c799e9.chunk.js.map",
+    "static/js/2.cfcb7224.chunk.js": "/store-react-app/static/js/2.cfcb7224.chunk.js",
+    "static/js/2.cfcb7224.chunk.js.map": "/store-react-app/static/js/2.cfcb7224.chunk.js.map",
     "index.html": "/store-react-app/index.html",
-    "precache-manifest.42834f4cf00d0536fe62c4be65fe6ebc.js": "/store-react-app/precache-manifest.42834f4cf00d0536fe62c4be65fe6ebc.js",
+    "precache-manifest.dc98cb3a40bb0430b7ac1444c1b204cc.js": "/store-react-app/precache-manifest.dc98cb3a40bb0430b7ac1444c1b204cc.js",
     "service-worker.js": "/store-react-app/service-worker.js",
-    "static/css/main.4f908955.chunk.css.map": "/store-react-app/static/css/main.4f908955.chunk.css.map",
-    "static/js/2.55c799e9.chunk.js.LICENSE.txt": "/store-react-app/static/js/2.55c799e9.chunk.js.LICENSE.txt",
+    "static/css/main.7bc28bd8.chunk.css.map": "/store-react-app/static/css/main.7bc28bd8.chunk.css.map",
+    "static/js/2.cfcb7224.chunk.js.LICENSE.txt": "/store-react-app/static/js/2.cfcb7224.chunk.js.LICENSE.txt",
     "static/media/aerolab-logo.svg": "/store-react-app/static/media/aerolab-logo.71af6f4b.svg",
     "static/media/buy-blue.svg": "/store-react-app/static/media/buy-blue.2f11a957.svg",
     "static/media/buy-white.svg": "/store-react-app/static/media/buy-white.40bc2813.svg",
@@ -20,8 +20,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.c5d0caaf.js",
-    "static/js/2.55c799e9.chunk.js",
-    "static/css/main.4f908955.chunk.css",
-    "static/js/main.a5c6979a.chunk.js"
+    "static/js/2.cfcb7224.chunk.js",
+    "static/css/main.7bc28bd8.chunk.css",
+    "static/js/main.c837ff9c.chunk.js"
   ]
 }
